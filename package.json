@@ -3,6 +3,24 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "nodemon": "^2.0.6",
-    "stripe": "^8.129.0"
-  }
+    "stripe": "^8.129.0",
+    "uuid": "^8.3.2"
+  },
+  "name": "moziistripe",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyerkye/moziistripe.git"
+  },
+  "author": "Erik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyerkye/moziistripe/issues"
+  },
+  "homepage": "https://github.com/kyerkye/moziistripe#readme"
 }
