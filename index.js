@@ -1,5 +1,6 @@
 const express = require('express');
-const stripe = require('stripe')('sk_test_51HoxQlHz');
+const Stripe = require('stripe')
+const stripe = Stripe('sk_test_51HoxQlHz');
 const cors = require('cors');
 const { v4: uuidv4 } = require('uuid');
 const PORT = 8080;
@@ -31,9 +32,10 @@ app.post('/payment', (req, res) => {
         stripe.charges.create({
             amount: product.price * 100,
             currency: 'usd',
+            payment_method: ['card'],
             customer: customer.id,
             receipt_email: token.email,
-            description: `purchase of product.name`,
+            description: `purchase of ${product.name}`,
             shipping: {
                 name: token.card.name,
                 address: {
